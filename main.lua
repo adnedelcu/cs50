@@ -1,3 +1,20 @@
+WINDOW_WIDTH = 1260
+WINDOW_HEIGHT = 720
+
+function love.load()
+    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
+        fullscreen = false,
+        resizable = false,
+        vsync = true
+    })
+end
+
 function love.draw()
-    love.graphics.print('Hello world', 400, 300)
+    love.graphics.printf(
+        'Hello pong!',
+        0,
+        WINDOW_HEIGHT / 2 - 6,
+        WINDOW_WIDTH,
+        'center'
+    )
 end
